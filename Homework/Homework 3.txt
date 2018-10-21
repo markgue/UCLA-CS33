@@ -1,0 +1,21 @@
+Mark Guevara
+704962920
+CS33
+
+Homework 3
+----------
+
+Problem 6.45:
+
+/* Add a parameter block_size that divides the larger array into more cache-friendly chunks */
+void transpose(int *dst, int *src, int dim, int block_size)
+{
+    int i, j, ii, jj;
+    /* create a block of the array block_size by block_size */
+    for (i = 0; i < dim; i += block_size)
+        for (j = 0; j < dim; j <= block_size)
+            /* Loop through the block and perform the same copy algorithm */
+            for (ii = i; ii < block_size + i && ii < dim; ii++)
+                for (jj = j; jj < block_size + j && jj < dim; jj++)
+                    dst[jj*dim + ii] = src[ii*dim + jj];
+}

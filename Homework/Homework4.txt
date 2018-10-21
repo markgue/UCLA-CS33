@@ -1,0 +1,48 @@
+Mark Guevara
+704962920
+CS33
+
+Homework 4
+==================
+
+1. 
+-----
+The program loops through the array save until it reaches a nonzero int,
+then prints the index of that value. The program outputs:
+
+"The value of i is: 7"
+
+Pseudocode:
+
+$s3 = 0
+$s4 = 1
+$s5 = 0
+load save into $s6
+
+while (true)
+{
+    # address of save[$s3] (multiplies $s3 by 4 since ints are 4 bytes)
+    $t8 = 4 * $s3 + $s6 
+    
+    # value of save[$s3]
+    $t9 = *$t8
+    
+    if ($t9 != 0)
+        break;
+    
+    $s3++
+}
+
+print message 1
+print $s3
+
+
+2. 
+-----
+The worst loop is e. jyix
+
+ for (j=0; j<SIZE; j++)
+  for (y=0; y<SIZE; y++)
+   for (i=0; i<SIZE; i++)
+    for (x=0; x<SIZE; x++)
+     c[i*SIZE+x][j*SIZE+y]=a[i][j]*b[x][y]; 

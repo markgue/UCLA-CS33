@@ -1,0 +1,50 @@
+Mark Guevara
+704962920
+
+Homework 1
+
+====================
+
+2.71
+----------
+A.	The code cannot process the most significant byte when it is negative, as it does not sign extend to an int because the input is unsigned.
+	Ex 0xf1000000 should return 0xfffffff1, but it will give 0x000000f1.
+B.	
+int xbyte(packet_t word, int bytenum)
+{
+	/* Use an int to ensure that when x is rightshifted it is done arithmetically. */
+	int x = (word << ((3 - bytenum) << 3);
+	return x >> 24;
+}
+
+
+2.82
+----------
+A. (x<y) == (-x>-y)
+	This is false when x is the minimum value of a 32-bit int, -2^31. In this case, -x overflows and evaluates to equal x,
+	which is always smaller than any given y value, so the right side can never be true and the left side will always be true.
+	
+B. ((x+y << 4) + y-x == 17*y+15*x
+	This is always true. Shifting x+y left by 4 bits is equivalent to multiplying x+y by 16, which is equivalent to 16*y+16*x.
+	Adding a y and removing an x gives 17*y+15*x.
+	
+C. ~x+~y+1 == ~(x+y)
+	This is always true. The negation operator - is equivalent to taking the inverse and adding 1 (i.e. -x = ~x + 1).
+	Therefore ~ is equivalent to taking the negation and subtracting 1 (i.e. ~x = -x - 1).
+	The left side is equivalent to:
+	= (-x - 1) + (-y - 1) + 1 
+	= -x + -y - 1
+	= -(x+y) - 1
+	= ~(x+y), which is equivalent to the right side. 
+	
+D. (ux-uy) == -(unsigned)(y-x)
+	This is always true. The - operator does not differ between signed and unsigned integers, so ux-uy is equivalent to x-y in bits.
+	Casting y-x as unsigned therefore makes no difference in the result, so taking the negative of that value is the same as doing -(y-x).
+	Since -(y-x) = x-y, and x-y is equivalent to ux-uy, the statement is always true. 
+	
+E. ((x >> 2) << 2) <= x
+	This is always true. Because the values only shift back and forth 2 bits, only the very first bit and very last two bits will change, with everything in between remaining the same.
+	The very first digit will remain the same through right then left shifting, so the result will have x's sign. 
+	Right shifting will remove the very last two bits (either 00, 01, 10, or 11), and left shifting back will make them 00.
+	In the case that the first bit is 1 (i.e. x is negative), the value of 1...00 will always be less than or equal to 1...00, 1...01, 1...10, or 1...11
+	In the case that the first bit is 0 (i.e. x is positive), the value of 0...00 will always be less than or equal to 0...00, 0...01, 1...10, or 1...01

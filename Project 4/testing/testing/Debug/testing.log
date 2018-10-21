@@ -1,0 +1,23 @@
+﻿  main.c
+d:\cs projects\cs33\project 4\testing\testing\main.c(32): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+d:\cs projects\cs33\project 4\testing\testing\main.c(33): error C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(2261): note: see declaration of 'sscanf'
+d:\cs projects\cs33\project 4\testing\testing\main.c(34): error C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(2261): note: see declaration of 'sscanf'
+d:\cs projects\cs33\project 4\testing\testing\main.c(35): error C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(2261): note: see declaration of 'sscanf'
+d:\cs projects\cs33\project 4\testing\testing\main.c(40): error C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(2261): note: see declaration of 'sscanf'
+d:\cs projects\cs33\project 4\testing\testing\main.c(49): error C2037: left of 'tv_sec' specifies undefined struct/union 'timeval'
+d:\cs projects\cs33\project 4\testing\testing\main.c(49): error C2037: left of 'tv_usec' specifies undefined struct/union 'timeval'
+d:\cs projects\cs33\project 4\testing\testing\main.c(49): warning C4033: 'DiffTime' must return a value
+d:\cs projects\cs33\project 4\testing\testing\main.c(56): error C2079: 'start' uses undefined struct 'timeval'
+d:\cs projects\cs33\project 4\testing\testing\main.c(56): error C2079: 'end' uses undefined struct 'timeval'
+d:\cs projects\cs33\project 4\testing\testing\main.c(74): warning C4013: 'gettimeofday' undefined; assuming extern returning int
+d:\cs projects\cs33\project 4\testing\testing\main.c(77): error C2440: 'function': cannot convert from 'int' to 'timeval'
+d:\cs projects\cs33\project 4\testing\testing\main.c(77): warning C4024: 'DiffTime': different types for formal and actual parameter 1
+d:\cs projects\cs33\project 4\testing\testing\main.c(77): warning C4024: 'DiffTime': different types for formal and actual parameter 2
+d:\cs projects\cs33\project 4\testing\testing\main.c(86): error C2440: 'function': cannot convert from 'int' to 'timeval'
+d:\cs projects\cs33\project 4\testing\testing\main.c(86): warning C4024: 'DiffTime': different types for formal and actual parameter 1
+d:\cs projects\cs33\project 4\testing\testing\main.c(86): warning C4024: 'DiffTime': different types for formal and actual parameter 2
